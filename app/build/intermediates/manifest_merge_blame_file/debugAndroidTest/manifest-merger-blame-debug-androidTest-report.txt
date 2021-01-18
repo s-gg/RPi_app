@@ -3,35 +3,35 @@
 3    package="com.example.rpi_app.test" >
 4
 5    <uses-sdk
-5-->D:\Android_Project\RPi_app\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5969385533058998149.xml:5:5-74
+5-->D:\Android_Project\RPi_app\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger792413438210813213.xml:5:5-74
 6        android:minSdkVersion="22"
-6-->D:\Android_Project\RPi_app\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5969385533058998149.xml:5:15-41
+6-->D:\Android_Project\RPi_app\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger792413438210813213.xml:5:15-41
 7        android:targetSdkVersion="30" />
-7-->D:\Android_Project\RPi_app\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5969385533058998149.xml:5:42-71
+7-->D:\Android_Project\RPi_app\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger792413438210813213.xml:5:42-71
 8
 9    <instrumentation
-9-->D:\Android_Project\RPi_app\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5969385533058998149.xml:11:5-15:69
+9-->D:\Android_Project\RPi_app\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger792413438210813213.xml:11:5-15:69
 10        android:name="androidx.test.runner.AndroidJUnitRunner"
-10-->D:\Android_Project\RPi_app\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5969385533058998149.xml:11:22-76
+10-->D:\Android_Project\RPi_app\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger792413438210813213.xml:11:22-76
 11        android:functionalTest="false"
-11-->D:\Android_Project\RPi_app\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5969385533058998149.xml:14:22-52
+11-->D:\Android_Project\RPi_app\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger792413438210813213.xml:14:22-52
 12        android:handleProfiling="false"
-12-->D:\Android_Project\RPi_app\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5969385533058998149.xml:13:22-53
+12-->D:\Android_Project\RPi_app\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger792413438210813213.xml:13:22-53
 13        android:label="Tests for com.example.rpi_app"
-13-->D:\Android_Project\RPi_app\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5969385533058998149.xml:15:22-67
+13-->D:\Android_Project\RPi_app\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger792413438210813213.xml:15:22-67
 14        android:targetPackage="com.example.rpi_app" />
-14-->D:\Android_Project\RPi_app\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5969385533058998149.xml:12:22-65
+14-->D:\Android_Project\RPi_app\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger792413438210813213.xml:12:22-65
 15
 16    <uses-permission android:name="android.permission.REORDER_TASKS" />
 16-->[androidx.test:core:1.1.0] C:\Users\Adminstrator\.gradle\caches\transforms-2\files-2.1\b700bfc0f9180812ac817088e66c00b6\core-1.1.0\AndroidManifest.xml:24:5-72
 16-->[androidx.test:core:1.1.0] C:\Users\Adminstrator\.gradle\caches\transforms-2\files-2.1\b700bfc0f9180812ac817088e66c00b6\core-1.1.0\AndroidManifest.xml:24:22-69
 17
 18    <application android:debuggable="true" >
-18-->D:\Android_Project\RPi_app\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5969385533058998149.xml:7:5-9:19
-18-->D:\Android_Project\RPi_app\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5969385533058998149.xml:7:18-43
+18-->D:\Android_Project\RPi_app\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger792413438210813213.xml:7:5-9:19
+18-->D:\Android_Project\RPi_app\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger792413438210813213.xml:7:18-43
 19        <uses-library android:name="android.test.runner" />
-19-->D:\Android_Project\RPi_app\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5969385533058998149.xml:8:9-60
-19-->D:\Android_Project\RPi_app\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5969385533058998149.xml:8:23-57
+19-->D:\Android_Project\RPi_app\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger792413438210813213.xml:8:9-60
+19-->D:\Android_Project\RPi_app\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger792413438210813213.xml:8:23-57
 20
 21        <activity
 21-->[androidx.test:core:1.1.0] C:\Users\Adminstrator\.gradle\caches\transforms-2\files-2.1\b700bfc0f9180812ac817088e66c00b6\core-1.1.0\AndroidManifest.xml:27:9-33:20

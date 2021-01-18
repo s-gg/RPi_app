@@ -219,7 +219,7 @@ public class MainActivity extends AppCompatActivity
      * 停止播放按钮onclick方法
      * @param view
      */
-    public void StopPlaying(View view){
+    public void stopPlaying(View view){
         VideoView vv=(VideoView)componentMap.get("vv_recv");
         if(vv!=null&&vv.isPlaying()){
             vv.stopPlayback();
