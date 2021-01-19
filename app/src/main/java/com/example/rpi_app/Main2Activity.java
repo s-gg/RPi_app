@@ -19,7 +19,7 @@ public class Main2Activity extends AppCompatActivity {
         Intent intent=new Intent();
         intent.setAction("android.intent.action.VIEW");
         //intent.setData(Uri.parse("192.168.50.71:8081"));
-        intent.setData(Uri.parse("https://www.hao123.com/"));
+        intent.putExtra("CameralURL","http://192.168.50.71:8081/?action=snapshot");
         startActivity(intent);
     }
 
