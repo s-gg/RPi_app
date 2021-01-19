@@ -17,7 +17,7 @@ public class Main2Activity extends AppCompatActivity {
 
     public void btn_openVideo(View v){
         Intent intent=new Intent();
-        intent.setAction("android.intent.action.VIEW");
+        intent.setAction("com.example.rpi_app.VIDEOPLAY");
         //intent.setData(Uri.parse("192.168.50.71:8081"));
         intent.putExtra("CameralURL","http://192.168.50.71:8081/?action=snapshot");
         startActivity(intent);
