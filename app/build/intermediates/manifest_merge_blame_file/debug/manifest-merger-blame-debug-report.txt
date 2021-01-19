@@ -15,7 +15,7 @@
 11-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:5:22-64
 12
 13    <application
-13-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:7:5-29:19
+13-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:7:5-34:19
 14        android:allowBackup="true"
 14-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:8:9-35
 15        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -29,39 +29,51 @@
 19-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:11:9-54
 20        android:supportsRtl="true"
 20-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:12:9-35
-21        android:theme="@style/AppTheme" >
-21-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:13:9-40
-22        <activity android:name="com.example.rpi_app.MjpgStreamerActivity" />
-22-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:14:9-67
-22-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:14:19-55
-23        <activity android:name="com.example.rpi_app.Main2Activity" >
-23-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:15:9-21:20
-23-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:15:19-48
+21        android:testOnly="true"
+22        android:theme="@style/AppTheme" >
+22-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:13:9-40
+23        <activity android:name="com.example.rpi_app.MjpgStreamerActivity" >
+23-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:14:9-19:20
+23-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:14:19-55
 24            <intent-filter>
-24-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:16:13-20:29
-25                <action android:name="android.intent.action.MAIN" />
-25-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:17:17-69
-25-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:17:25-66
+24-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:15:13-18:29
+25                <action android:name="com.example.rpi_app.VIDEOPLAY" />
+25-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:16:17-71
+25-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:16:25-69
 26
-27                <category android:name="android.intent.category.LAUNCHER" />
-27-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:19:17-77
-27-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:19:27-74
+27                <category android:name="android.intent.category.DEFAULT" />
+27-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:17:17-75
+27-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:17:27-73
 28            </intent-filter>
 29        </activity>
-30        <activity android:name="com.example.rpi_app.MainActivity" >
-30-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:22:9-28:20
-30-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:22:19-47
+30        <activity android:name="com.example.rpi_app.Main2Activity" >
+30-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:20:9-26:20
+30-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:20:19-48
 31            <intent-filter>
-31-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:23:13-27:29
-32                <action android:name="com.example.rip_app.MainActivity" />
-32-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:24:17-75
-32-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:24:25-72
+31-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:21:13-25:29
+32                <action android:name="android.intent.action.MAIN" />
+32-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:22:17-69
+32-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:22:25-66
 33
-34                <category android:name="android.intent.category.DEFAULT" />
-34-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:26:17-76
-34-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:26:27-73
+34                <category android:name="android.intent.category.LAUNCHER" />
+34-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:24:17-77
+34-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:24:27-74
 35            </intent-filter>
 36        </activity>
-37    </application>
-38
-39</manifest>
+37        <activity android:name="com.example.rpi_app.MainActivity" >
+37-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:27:9-33:20
+37-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:27:19-47
+38            <intent-filter>
+38-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:28:13-32:29
+39                <action android:name="com.example.rip_app.MainActivity" />
+39-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:29:17-75
+39-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:29:25-72
+40
+41                <category android:name="android.intent.category.DEFAULT" />
+41-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:17:17-75
+41-->D:\Android_Project\RPi_app\app\src\main\AndroidManifest.xml:17:27-73
+42            </intent-filter>
+43        </activity>
+44    </application>
+45
+46</manifest>
