@@ -19,7 +19,7 @@ public class Main2Activity extends AppCompatActivity {
         Intent intent=new Intent();
         intent.setAction("com.example.rpi_app.VIDEOPLAY");
         //intent.setData(Uri.parse("192.168.50.71:8081"));
-        intent.putExtra("CameralURL","http://192.168.50.71:8081/?action=snapshot");
+        intent.putExtra("CameralURL","http://192.168.50.90:8080/?action=stream");
         startActivity(intent);
     }
 

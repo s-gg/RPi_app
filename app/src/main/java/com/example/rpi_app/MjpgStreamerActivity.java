@@ -1,4 +1,5 @@
 package com.example.rpi_app;
+import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -12,6 +13,7 @@ import android.graphics.Color;
 import android.graphics.RectF;
 import android.os.Bundle;
 import android.view.SurfaceHolder;
+import android.view.View;
 import android.view.Window;
 import android.view.SurfaceHolder.Callback;
 import android.view.SurfaceView;
@@ -24,6 +26,7 @@ public class MjpgStreamerActivity extends Activity implements Runnable{
     private String url;
     private int w;
     private int h;
+    private InputStream VideoIS;
     HttpURLConnection conn;
     Bitmap bmp;
     @Override
@@ -36,9 +39,6 @@ public class MjpgStreamerActivity extends Activity implements Runnable{
 
         url = getIntent().getExtras().getString("CameralURL");
 
-        w = getWindowManager().getDefaultDisplay().getWidth();
-        h = getWindowManager().getDefaultDisplay().getHeight();
-
         SurfaceView surface = findViewById(R.id.surface);
 
         surface.setKeepScreenOn(true);// 保持屏幕常亮
@@ -48,13 +48,13 @@ public class MjpgStreamerActivity extends Activity implements Runnable{
 
             @Override
             public void surfaceDestroyed(SurfaceHolder holder) {
-                // TODO Auto-generated method stub
-
+                //关闭HttpURLConnection连接
+                conn.disconnect();
             }
 
             @Override
             public void surfaceCreated(SurfaceHolder holder) {
-                // TODO Auto-generated method stub
+                connection();
                 mythread.start();
             }
 
@@ -65,12 +65,31 @@ public class MjpgStreamerActivity extends Activity implements Runnable{
 
             }
         });
-
     }
+
     private void draw() {
         // TODO Auto-generated method stub
         try {
-            InputStream inputstream = null;
+            //得到网络返回的输入流
+            VideoIS = conn.getInputStream();
+            //创建出一个bitmap
+            bmp = BitmapFactory.decodeStream(VideoIS);
+            w=bmp.getWidth();
+            h=bmp.getHeight();
+            canvas = holder.lockCanvas();
+            canvas.drawColor(Color.WHITE);
+            RectF rectf = new RectF(0,0,w,h);
+            canvas.drawBitmap(bmp, null, rectf, null);
+            holder.unlockCanvasAndPost(canvas);
+            //关闭HttpURLConnection连接
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        } finally {
+        }
+    }
+
+    public void connection(){
+        try {
             //创建一个URL对象
             videoUrl=new URL(url);
             //利用HttpURLConnection对象从网络中获取网页数据
@@ -79,20 +98,10 @@ public class MjpgStreamerActivity extends Activity implements Runnable{
             conn.setDoInput(true);
             //连接
             conn.connect();
-            //得到网络返回的输入流
-            inputstream = conn.getInputStream();
-            //创建出一个bitmap
-            bmp = BitmapFactory.decodeStream(inputstream);
-            canvas = holder.lockCanvas();
-            canvas.drawColor(Color.WHITE);
-            RectF rectf = new RectF(0, 0, w, h);
-            canvas.drawBitmap(bmp, null, rectf, null);
-            holder.unlockCanvasAndPost(canvas);
-            //关闭HttpURLConnection连接
-            conn.disconnect();
-        } catch (Exception ex) {
-        } finally {
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+
     }
 
     @Override
