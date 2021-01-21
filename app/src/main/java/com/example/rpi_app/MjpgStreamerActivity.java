@@ -27,7 +27,8 @@ public class MjpgStreamerActivity extends AppCompatActivity {
     private int w;
     private int h;
     private InputStream videoIS;
-    HttpURLConnection conn;
+    private HttpURLConnection conn;
+    private RectF rectF=new RectF();
     Bitmap bmp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,10 +81,11 @@ public class MjpgStreamerActivity extends AppCompatActivity {
                 try {
                     conn=(HttpURLConnection)videoUrl.openConnection();
                     conn.setRequestMethod("GET");
-                    conn.setDoInput(true);
-
-                    videoIS=conn.getInputStream();
-                    bmp=BitmapFactory.decodeStream(videoIS);
+                    conn.setConnectTimeout(10000);
+                    conn.setReadTimeout(10000);
+              //      conn.setDoInput(true);
+                    videoIS = conn.getInputStream();
+                    bmp = BitmapFactory.decodeStream(videoIS);
                     UIop(bmp);
 
                 }catch(MalformedURLException e){
@@ -115,10 +117,9 @@ public class MjpgStreamerActivity extends AppCompatActivity {
                     h=bitmap.getHeight();
                     canvas = holder.lockCanvas();
                     canvas.drawColor(Color.WHITE);
-                    RectF rectf = new RectF(0,0,w,h);
-                    canvas.drawBitmap(bmp, null, rectf, null);
+                    rectF.set(0,0,w,h);
+                    canvas.drawBitmap(bmp, null, rectF, null);
                     holder.unlockCanvasAndPost(canvas);
-
                 } catch (Exception ex) {
                     ex.printStackTrace();
                 }
