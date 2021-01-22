@@ -4,13 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Main2Activity">
 
     <Button
-        android:id="@+id/btn_test"
+        android:id="@+id/btn_photo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="btn_openVideo"
-        android:text="打开浏览器播放视频" />
+        android:onClick="btn_photo"
+        android:text="capture a photo" />
+
+    <Button
+        android:id="@+id/btn_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="btn_video"
+        android:text="open the video by using an internal browser"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="18dp"
+        android:text="内置浏览器:"/>
+
+    <WebView
+        android:id="@+id/wv_stream"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>
